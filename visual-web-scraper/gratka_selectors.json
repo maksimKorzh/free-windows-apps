@@ -1,0 +1,30 @@
+[
+  {
+    "text": "Mieszkanie na sprzeda\u017c, 60 m\u00b2, 2 pokoje Wroc\u0142aw \u015ar\u00f3dmie\u015bcie Nadodrze",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div > nav > span"
+  },
+  {
+    "text": "510 000 z\u0142",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > span:nth-of-type(1)"
+  },
+  {
+    "text": "8 500 z\u0142/m\u00b2",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > span:nth-of-type(2)"
+  },
+  {
+    "text": "Pokoje2",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(1)"
+  },
+  {
+    "text": "Powierzchnia60 m\u00b2",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2)"
+  },
+  {
+    "text": "Pi\u0119troparter z 5",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(3)"
+  },
+  {
+    "text": "Wroc\u0142aw - Nadodrze - Plac Powsta\u0144c\u00f3w Wielkopolskich - do sprzedania 2 pokojowe mieszkanie, w pe\u0142ni rozk\u0142adowe, dwustronne, z jasn\u0105 kuchni\u0105, o ca\u0142kowitej powierzchni 60,31 mkw. Lokal utrzymany w bardzo dobrym stanie, okna pcv, na pod\u0142ogach \u0142adny parkiet, \u0142azienka z wc po kapitalnym remoncie. W mieszkaniu zosta\u0142a wymieniona elektryka - opr\u00f3cz du\u017cego pokoju i kuchni, w kuchni tylko nowe przy\u0142\u0105cze elektryczne do kuchenki oraz instalacja wodna i kanalizacyjna. Dla ch\u0119tnych mo\u017cliwo\u015b\u0107 przebudowy uk\u0142adu i funkcji pomieszcze\u0144. Jasna kuchnia i du\u017cy pok\u00f3j od strony podw\u00f3rka - jest czyste i zadbane, mniejszy pok\u00f3j, do kt\u00f3rego wchodzimy przez ny\u017c\u0119 jest od strony ulicy. Wysoko\u015b\u0107 mieszkania 3,8 m - umo\u017cliwia zbudowanie dodatkowej antresoli z funkcj\u0105 sypialni b\u0105d\u017a biura. Pokoje maj\u0105 odpowiednio: 19,8 mkw, 11,3 mkw, ny\u017ca 8,1 mkw, kuchnia 11 mkw, \u0142azienka z wc 5,4 mkw. Ogrzewanie gazowe - piec dwufunkcyjny. Kamienica w dobrym stanie, dach i klatka schodowa s\u0105 po remoncie, piony wodne i kanalizacja s\u0105 wymienione. Kamienica od strony podw\u00f3rka jest ocieplona. Zapraszam do ogl\u0105dania i zakupu.",
+    "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(2) > main > div:nth-of-type(1) > div:nth-of-type(2) > section > div:nth-of-type(3) > div"
+  }
+]
