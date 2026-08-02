@@ -1,8 +1,11 @@
+# Packages
 import csv
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog, font
 
+# App class
 class CSVEditor:
+    # Create view
     def __init__(self, root):
         self.root = root
         self.root.title("CSV Editor")
@@ -26,6 +29,7 @@ class CSVEditor:
         table_frame.grid_rowconfigure(0, weight=1)
         table_frame.grid_columnconfigure(0, weight=1)
 
+    # Create menu
     def make_menu(self):
         menu = tk.Menu(self.root)
         file_menu = tk.Menu(menu, tearoff=False)
@@ -45,6 +49,7 @@ class CSVEditor:
         menu.add_cascade(label="Edit", menu=edit_menu)
         self.root.config(menu=menu)
 
+    # Create new CSV file buffer
     def new_csv(self):
         count = simpledialog.askinteger(
             "New CSV",
@@ -68,6 +73,7 @@ class CSVEditor:
             self.columns.append(name)
         self.refresh_tree()
 
+    # Read CSV file
     def open_csv(self):
         filename = filedialog.askopenfilename(
             filetypes=[("CSV Files", "*.csv")]
@@ -81,6 +87,7 @@ class CSVEditor:
         self.filename = filename
         self.refresh_tree()
 
+    # Render CSV file
     def refresh_tree(self):
         self.tree.delete(*self.tree.get_children())
         self.tree["columns"] = self.columns
@@ -99,11 +106,13 @@ class CSVEditor:
                     width = max(width, cell_font.measure(str(row[i])))
             self.tree.column(col, width=width+20)
 
+    # Edit header or entry
     def double_click(self, event):
         region = self.tree.identify_region(event.x, event.y)
         if region == "heading": self.rename_column(event)
         elif region == "cell": self.edit_cell(event)
 
+    # Rename CSV column
     def rename_column(self, event):
         column = self.tree.identify_column(event.x)
         if not column: return
@@ -118,6 +127,7 @@ class CSVEditor:
         self.columns[index] = new_name
         self.refresh_tree()
 
+    # Edit single CSV entry
     def edit_cell(self, event):
         item = self.tree.identify_row(event.y)
         column = self.tree.identify_column(event.x)
@@ -143,6 +153,7 @@ class CSVEditor:
         entry.bind("<FocusOut>", save)
         entry.bind("<Escape>", lambda e: entry.destroy())
 
+    # Write modified CSV to the same file
     def save_csv(self):
         if not self.filename:
             self.save_as()
@@ -153,6 +164,7 @@ class CSVEditor:
             writer.writerows(self.data)
         messagebox.showinfo("Saved", "CSV saved successfully.")
 
+    # Write CSV to new file
     def save_as(self):
         filename = filedialog.asksaveasfilename(
             defaultextension=".csv",
@@ -162,6 +174,7 @@ class CSVEditor:
         self.filename = filename
         self.save_csv()
 
+    # Append row to CSV
     def add_row(self):
         if not self.columns:
             messagebox.showwarning(
@@ -173,6 +186,7 @@ class CSVEditor:
         self.data.append(row)
         self.tree.insert("", "end", values=row)
 
+    # Pop row from CSV
     def delete_row(self):
         items = list(self.tree.selection())
         if not items: return
@@ -183,6 +197,7 @@ class CSVEditor:
         for index in indexes: del self.data[index]
         for item in items: self.tree.delete(item)
     
+    # Append column to CSV
     def add_column(self):
         if not self.columns:
             messagebox.showwarning(
@@ -204,6 +219,7 @@ class CSVEditor:
             row.append("")
         self.refresh_tree()
 
+    # Pop column from CSV
     def delete_column(self):
         if not self.columns: return
         self.columns.pop()
@@ -211,6 +227,7 @@ class CSVEditor:
             if row: row.pop()
         self.refresh_tree()
 
+# Main driver
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("CSV Editor")
