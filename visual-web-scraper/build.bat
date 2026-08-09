@@ -1,0 +1,1 @@
+ pyinstaller --onefile --hide-console hide-early visual-web-scraper.py
